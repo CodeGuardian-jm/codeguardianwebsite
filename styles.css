@@ -2695,99 +2695,32 @@ section:nth-child(even) {
 
 
 
-/* =========================================
-   PREMIUM MOBILE ARRAY (TARGETING IPHONE 12+)
-   ========================================= */
 @media (max-width: 768px) {
-  
-  /* 1. Global Viewport Safety Nets */
-  body, html {
-    overflow-x: hidden; /* Hard block against annoying horizontal side-scrolling */
-    width: 100%;
-  }
-  
-  .container {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
-    width: 100% !important;
-  }
-
-  main {
-    padding-top: 90px !important; /* Tighter header clearance for smaller screens */
-  }
-
-  /* 2. Responsive Typography Scaling */
-  h1, .terminal-title {
-    font-size: 1.85rem !important; /* Keeps title from awkwardly wrapping into 3 lines */
-    letter-spacing: -0.5px !important;
-  }
-
-  h3 {
-    font-size: 1.35rem !important;
-  }
-
-  /* 3. Pricing Matrix Grid Collapse */
-  .pricing-grid {
-    grid-template-columns: 1fr !important; /* Stacks cards cleanly in a vertical column */
-    gap: 1.5rem !important;
-  }
-
-  /* 4. Formatting Fixes for Panels & Security Gates */
-  .security-gate, .contact-form {
-    padding: 1.5rem 1.25rem !important; /* Tightens internal spacing so form fields have room */
+  /* 1. THE NUCLEAR RESET: Stops ANY element from stretching wider than the phone screen */
+  *, *:before, *:after {
     max-width: 100% !important;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
   }
 
-  /* Fixes form inputs blowing past panel edges */
-  .form-group input, 
-  .form-group select, 
-  .form-group textarea {
+  /* 2. FORCE THE CORE WRAPPERS TO OBEY THE SCREEN */
+  html, body {
     width: 100% !important;
-    font-size: 16px !important; /* CRITICAL: Prevents iOS from automatically zooming in on focus */
-    box-sizing: border-box;
+    overflow-x: hidden !important; /* Locks the page strictly on a vertical axis */
+    position: relative;
   }
 
-  /* 5. Translating Desktop Hovers to Premium Touch Interactions */
-  
-  /* Turn off desktop translate transforms that feel laggy on phone scrolls */
-  .pricing-card:hover, .ledger-block:hover {
-    transform: none !important;
-    box-shadow: none !important;
+  /* 3. SMASH ALL FLEX AND GRID CONTAINERS INTO A SINGLE VERTICAL COLUMN */
+  div, section, article, main {
+    display: flex !important;
+    flex-direction: column !important;
+    float: none !important;
+    width: 100% !important;
   }
 
-  /* Introduce Instant Haptic Touch Feedback instead */
-  .pricing-card:active, 
-  .ledger-block:active,
-  .btn:active {
-    transform: scale(0.98) !important; /* Physical compression effect on tap */
-    border-color: var(--color-accent) !important;
-    background: rgba(185, 28, 28, 0.05) !important;
-    transition: transform 0.1s ease !important;
-  }
-
-  /* Ensure Glow States apply directly to the recommended card naturally on mobile */
-  .pricing-card.recommended-tier {
-    border-color: rgba(185, 28, 28, 0.4) !important;
-    box-shadow: 0 0 20px rgba(185, 28, 28, 0.1) !important;
-  }
-
-  /* Tighter, cleaner footer layout */
-  .footer-inner {
-    text-align: center;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-}
-
-/* Ensure desktop hover rules only execute on screens that actually have a mouse pointer */
-@media (hover: hover) {
-  .pricing-card:hover {
-    transform: translateY(-8px) scale(1.01);
-    border-color: rgba(255, 255, 255, 0.25) !important;
-  }
-  .ledger-block:hover {
-    transform: translateY(-4px);
-    border-color: rgba(185, 28, 28, 0.4) !important;
+  /* 4. FORCE TECHNICAL STRINGS, LABELS, AND DATA TO SNAP-WRAP */
+  p, span, h1, h2, h3, h4, h5, h6, code, pre, li, a, td, th {
+    white-space: normal !important;      /* Overrides any 'nowrap' settings */
+    overflow-wrap: break-word !important; /* Breaks ultra-long strings/paths to the next line */
+    word-break: break-word !important;
   }
 }
