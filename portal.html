@@ -69,15 +69,115 @@
             <input type="email" id="opEmail" placeholder="e.g. name@business.com" required>
           </div>
 
-          <div class="form-group">
-            <label>DESIRED ARCHITECTURE PACKAGE</label>
-            <select id="inquiryType" required>
-              <option value="Starter Tier">Starter Plan // Core Messaging & Ledger (50,000 JMD/mo)</option>
-              <option value="Growth Tier">Growth Plan // AI Autopilot Integration (110,000 JMD/mo)</option>
-              <option value="Enterprise Tier">Enterprise Plan // Full Custom Architecture (175,000 JMD/mo)</option>
-              <option value="Custom Infrastructure Build">Custom Infrastructure Design / Buildout</option>
-            </select>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Boardroom | Secure Access</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-text">CodeGuardian</span></a>
+    <nav class="nav">
+  <ul class="nav-list">
+  <li><a href="index.html" class="nav-link">Home</a></li>
+  <li><a href="about.html" class="nav-link">Methodology</a></li>
+  <li><a href="services.html" class="nav-link">Infrastructure</a></li>
+  <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+  <li><a href="portal.html" class="nav-link btn btn-outline">Boardroom</a></li>
+</ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Unified Tactical Header & Gateway -->
+  <section class="section reveal boardroom-hero" style="padding-bottom: 1.5rem;">
+    <div class="container text-center">
+      <div class="security-gate kinetic-panel" style="border: 1px solid var(--color-accent); box-shadow: 0 0 30px rgba(207, 0, 0, 0.1); max-width: 650px; margin: 0 auto; position: relative; padding: 2.5rem 2rem;">
+        <div class="gate-scan-line"></div> 
+        
+        <div class="gate-header">
+          <!-- Merged Status Indicators -->
+          <div class="access-status" style="font-family: monospace; font-size: 0.85rem; letter-spacing: 3px; margin-bottom: 1rem;">
+            <span style="color: #00ff00; text-shadow: 0 0 10px rgba(0,255,0,0.5);">● SYSTEM_READY</span> 
+            <span style="color: #444; margin: 0 10px;">//</span> 
+            <span style="color: var(--color-accent); text-shadow: 0 0 10px rgba(207,0,0,0.4);">UPLINK_ACTIVE</span>
           </div>
+          
+          <!-- Unified Master Title -->
+          <h1 class="terminal-title" style="font-size: 2.5rem; letter-spacing: -1px; margin-bottom: 0.5rem; font-family: 'Inter', sans-serif;">The Boardroom Portal</h1>
+          <p class="text-muted" style="font-family: monospace; font-size: 0.85rem; letter-spacing: 1px; color: #888;">EDO_PROTOCOL // SECURE_DATA_INTAKE</p>
+        </div>
+        
+        <!-- Interactive Terminal Feed Line -->
+        <div class="gate-footer" style="margin-top: 1.5rem; border-top: 1px solid #1a1a1a; padding-top: 1.5rem; font-family: monospace; font-size: 0.8rem; color: #666;">
+          <p style="margin-bottom: 0.5rem;"><span style="color: #00ff00;">[OK]</span> ESTABLISHED SECURE NETWORK LINK... 200_SUCCESS</p>
+          <a href="#audit-form" class="audit-link" style="color: var(--color-accent); font-weight: bold; letter-spacing: 2px; text-decoration: none; font-size: 0.9rem;">INITIATE DATA TRANSMISSION <span class="blink-cursor">_</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Intake Form -->
+  <section id="audit-form" class="section reveal audit-section" style="padding-top: 1.5rem;">
+    <div class="container">
+      <div class="contact-form terminal-panel" style="max-width: 650px; margin: 0 auto; background: #050505; border: 1px solid #111; padding: 2.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+        
+        <form id="guardianAuditForm" class="kinetic-form">
+          
+          <div class="form-group">
+            <label>OPERATOR NAME / BUSINESS IDENTIFIER</label>
+            <input type="text" id="opName" placeholder="e.g. Tyrese Bailey" required>
+          </div>
+
+          <div class="form-group">
+            <label>SECURE RETURN LINE (EMAIL)</label>
+            <input type="email" id="opEmail" placeholder="e.g. name@business.com" required>
+          </div>
+
+       <div class="form-group">
+  <label>DESIRED ARCHITECTURE PACKAGE</label>
+  <select id="inquiryType" required>
+    <option value="" disabled selected hidden>SELECT_DEPLOYMENT_TARGET...</option>
+    <option value="Starter Tier">Starter Plan // Core Messaging & Ledger (45,000 - 60,000 JMD/mo)</option>
+    <option value="Growth Tier">Growth Plan // AI Autopilot & Vision Array (75,000 - 110,000 JMD/mo)</option>
+    <option value="Enterprise Tier">Enterprise Plan // Custom Architecture Matrix (110,000+ JMD/mo)</option>
+    <option value="Custom Infrastructure Build">Bespoke Infrastructure Design / Single Asset Buildout</option>
+  </select>
+</div>
+
+          <div class="form-group">
+            <label>TRANSMISSION DESCRIPTION (OPERATIONAL BOTTLENECKS)</label>
+            <textarea id="opMessage" rows="5" placeholder="Specify which parts of your workflows or systems you want automated..." required></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn btn-primary pulse" style="width: 100%; margin-top: 1rem; font-weight: bold; letter-spacing: 2px;">TRANSMIT_DATA_PACKET</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">&copy; <span id="year"></span> CODEGUARDIAN. OWNED AND OPERATED BY TYRESE TYRICK BAILEY.<br><br>
+    KNIGHTSVILLE, YALLAHS P.O., ST. THOMAS, JAMAICA</p>
+    <ul class="footer-links">
+      <li><a href="#top">System Reset</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
+
 
           <div class="form-group">
             <label>TRANSMISSION DESCRIPTION (OPERATIONAL BOTTLENECKS)</label>
