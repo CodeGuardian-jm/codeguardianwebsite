@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeGuardian | Infrastructure Pricing</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Transparent, volume-scaled, and feature-gated operational automation tiers." />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-text">CodeGuardian</span></a>
+    
+    <button class="mobile-nav-toggle" aria-expanded="false">
+      <div class="hamburger"></div>
+    </button>
+
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">Methodology</a></li>
+        <li><a href="services.html" class="nav-link">Infrastructure</a></li>
+        <li><a href="pricing.html" class="nav-link active" style="color: var(--color-accent);">Pricing</a></li>
+        <li><a href="portal.html" class="nav-link btn btn-outline">Boardroom</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top" style="padding-top: 120px;">
+
+  <section class="section reveal text-center" style="padding-bottom: 2rem;">
+    <div class="container">
+      <p class="hero-eyebrow" style="letter-spacing: 3px; color: var(--color-accent);">PRICING_ARCHITECT_V2.0</p>
+      <h1 class="hero-title glitch-text" data-text="CHOOSE YOUR SCALE" style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 1rem;">
+        Operational Scale Matrix
+      </h1>
+      <p class="hero-subtitle" style="max-width: 700px; margin: 0 auto; color: #888;">
+        Displace manual data flow with absolute software precision. Select a pre-configured architecture tier or calculate your operational add-on infrastructure.
+      </p>
+    </div>
+  </section>
+
+  <section class="section reveal" style="padding-top: 0;">
+    <div class="container">
+<!-- 3 Infrastructure Tiers Grid -->
+<div class="pricing-grid">
+  
+  <!-- STARTER CARD -->
+  <div class="pricing-card terminal-panel">
+    <div class="p-card-header">
+      <div class="status-indicator"><span class="blip" style="background: #00ff00;"></span> SYSTEM_STABLE</div>
+      <h3>Starter Infrastructure</h3>
+      <p class="tier-purpose">For small operations, restaurants, and retail looking to automate basic bookkeeping & routing.</p>
+    </div>
+    <div class="p-card-price">
+      <span class="currency">JMD</span>
+      <span class="amount" style="font-size: 2.2rem;">45K - 60K</span>
+      <span class="period">/ mo</span>
+    </div>
+    <div class="p-card-setup">SETUP_FEE: <span style="color: #00ff00;">0 JMD</span></div>
+    <ul class="p-card-specs">
+      <li><strong>500</strong> Monthly Message Allocation</li>
+      <li><strong>50</strong> Monthly Ledger Transactions</li>
+      <li class="tappable-spec" onclick="openPricingDetail('starter-pillars')">View Pillar Inclusions <span class="spec-chevron">❯</span></li>
+      <li class="disabled-spec">AI Automated FAQ Engine</li>
+      <li class="disabled-spec">OpenAI Vision Screenshot Parsing</li>
+    </ul>
+    <a href="portal.html?tier=starter" class="btn p-card-btn">INITIALIZE_STARTER_LINK</a>
+  </div>
+
+  <!-- GROWTH CARD (RECOMMENDED DEPLOYMENT) -->
+  <div class="pricing-card terminal-panel recommended-tier">
+    <div class="recommended-badge">RECOMMENDED_DEPLOYMENT</div>
+    <div class="p-card-header">
+      <div class="status-indicator"><span class="blip" style="background: var(--color-accent); box-shadow: 0 0 10px var(--color-accent);"></span> AUTOPILOT_ACTIVE</div>
+      <h3>Growth Architecture</h3>
+      <p class="tier-purpose">Replaces front-desk receptionists, service reps, and basic bookkeepers with AI models.</p>
+    </div>
+    <div class="p-card-price">
+      <span class="currency">JMD</span>
+      <span class="amount" style="font-size: 2.2rem;">75K - 110K</span>
+      <span class="period">/ mo</span>
+    </div>
+    <div class="p-card-setup">SETUP_FEE: <span style="color: var(--color-accent);">45,000 JMD</span></div>
+    <ul class="p-card-specs">
+      <li><strong>2,500</strong> Monthly Message Allocation</li>
+      <li><strong>250</strong> Monthly Ledger Transactions</li>
+      <li><strong>AI Autopilot</strong> FAQ Responses 24/7</li>
+      <li><strong>OpenAI Vision</strong> Payment Scanner</li>
+      <li class="tappable-spec" onclick="openPricingDetail('growth-pillars')">View Pillar Inclusions <span class="spec-chevron">❯</span></li>
+    </ul>
+    <a href="portal.html?tier=growth" class="btn p-card-btn pulse-red">INITIALIZE_GROWTH_LINK</a>
+  </div>
+
+  <!-- ENTERPRISE CARD -->
+  <div class="pricing-card terminal-panel">
+    <div class="p-card-header">
+      <div class="status-indicator"><span class="blip" style="background: #00e5ff;"></span> FULL_CUSTOM</div>
+      <h3>Enterprise Matrix</h3>
+      <p class="tier-purpose">For complex, scaling systems requiring bespoke programming and standalone dashboard systems.</p>
+    </div>
+    <div class="p-card-price">
+      <span class="currency">JMD</span>
+      <span class="amount">110,000+</span>
+      <span class="period">/ mo</span>
+    </div>
+    <div class="p-card-setup">SETUP_FEE: <span style="color: #00e5ff;">100,000 JMD</span></div>
+    <ul class="p-card-specs">
+      <li><strong>UNLIMITED</strong> Message Capacity</li>
+      <li><strong>UNLIMITED</strong> Ledger Transactions</li>
+      <li><strong>Custom AppSheet</strong> Mobile App Build</li>
+      <li><strong>HR / Inventory</strong> Automation Modules</li>
+      <li class="tappable-spec" onclick="openPricingDetail('enterprise-pillars')">View Pillar Inclusions <span class="spec-chevron">❯</span></li>
+    </ul>
+    <a href="portal.html?tier=enterprise" class="btn p-card-btn">INITIALIZE_CUSTOM_LINK</a>
+  </div>
+
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" style="background: #070709; border-top: 1px solid #111; border-bottom: 1px solid #111;">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Standalone Ledger & Spikes</h2>
+        <p class="text-muted" style="font-size: 0.9rem;">Flat rates for structural upgrades or spikes beyond standard runtime variables.</p>
+      </div>
+
+      <div class="ledger-container">
+        <div class="ledger-block terminal-panel">
+          <h4>Asset Implementations</h4>
+          <div class="ledger-row">
+            <span class="ledger-item">Custom Web Platform Build</span>
+            <span class="ledger-price">60,000 — 120,000 JMD <small>(One-Time)</small></span>
+          </div>
+          <div class="ledger-row">
+            <span class="ledger-item">Extra Meta API / WhatsApp Number Line</span>
+            <span class="ledger-price">20,000 JMD <small>(One-Time Setup)</small></span>
+          </div>
+          <div class="ledger-row">
+            <span class="ledger-item">System Refactoring, Bug Fixes & Training</span>
+            <span class="ledger-price" style="color: #00ff00; font-weight: bold;">FREE <small>(Included in Retainer)</small></span>
+          </div>
+        </div>
+
+        <div class="ledger-block terminal-panel">
+          <h4>Infrastructure Runtime Overages</h4>
+          <div class="ledger-row">
+            <span class="ledger-item">Per 500 Extra Routed System Messages</span>
+            <span class="ledger-price">5,000 JMD</span>
+          </div>
+          <div class="ledger-row">
+            <span class="ledger-item">Per 100 Extra Ledger Financial Transactions</span>
+            <span class="ledger-price">3,000 JMD</span>
+          </div>
+          <div class="ledger-row">
+            <span class="ledger-item">Per 500 Extra OpenAI Vision Image Extractions</span>
+            <span class="ledger-price">2,000 JMD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="detail-modal" class="modal-overlay" onclick="closeDetail()">
+  <div class="modal-content glass" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeDetail()">&times;</button>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">&copy; <span id="year"></span> CODEGUARDIAN. OWNED AND OPERATED BY TYRESE TYRICK BAILEY.<br>
+    KNIGHTSVILLE, YALLAHS P.O., ST. THOMAS, JAMAICA</p>
+    <ul class="footer-links">
+      <li><a href="#top">System Reset</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>

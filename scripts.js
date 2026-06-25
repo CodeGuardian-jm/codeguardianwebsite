@@ -310,3 +310,77 @@ if (guardianForm) {
     }
   });
 }
+
+/* =========================================
+   CODEGUARDIAN PRICING & PORTAL COUPLING INTERACTION
+   ========================================= */
+
+// 1. Intake Auto-Fill Rule (Runs safely when loaded on portal.html)
+document.addEventListener("DOMContentLoaded", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const selectedTier = urlParams.get('tier');
+  const dropdownSelector = document.getElementById('inquiryType');
+
+  if (dropdownSelector && selectedTier) {
+    if (selectedTier === 'starter') {
+      dropdownSelector.value = 'Starter Tier';
+    } else if (selectedTier === 'growth') {
+      dropdownSelector.value = 'Growth Tier';
+    } else if (selectedTier === 'enterprise') {
+      dropdownSelector.value = 'Enterprise Tier';
+    }
+  }
+});
+
+// 2. High-Tech Modal Content Feed for Tappable Specs
+function openPricingDetail(contentKey) {
+  const modal = document.getElementById("detail-modal");
+  const modalBody = document.getElementById("modal-body");
+  
+  if (!modal || !modalBody) return;
+
+  const technicalManifests = {
+    'starter-pillars': `
+      <h3 style="color:#fff; font-family:monospace; margin-bottom:1rem;">[MANIFEST] STARTER PILLAR MATRIX</h3>
+      <p style="color:#888; font-size:0.9rem; line-height:1.6;">Below is the operational mapping layout built into the core framework tier:</p>
+      <ul style="color:#bbb; padding-left:20px; line-height:2rem; font-size:0.9rem;">
+        <li><strong style="color:var(--color-accent);">PILLAR 2:</strong> Real-time API channel tunneling. Syncs incoming Meta (WhatsApp / Instagram) messages cleanly into your local Discord triage room.</li>
+        <li><strong style="color:var(--color-accent);">PILLAR 3:</strong> Command-line execution logs. Triggers immediate financial entries into your ledger database using the custom <code style="color:#fff; background:#222; padding:2px 6px;">!invoice</code> utility.</li>
+        <li><strong style="color:var(--color-accent);">PILLAR 4:</strong> Automated fulfillment hooks. Generates verified GCT calculations and exports encrypted client billing statement PDFs automatically.</li>
+      </ul>
+    `,
+    'growth-pillars': `
+      <h3 style="color:var(--color-accent); font-family:monospace; margin-bottom:1rem;">[MANIFEST] GROWTH INTEGRATION PROTOCOLS</h3>
+      <p style="color:#888; font-size:0.9rem; line-height:1.6;">Everything included in Starter infrastructure, optimized with neural assets and vision parsers:</p>
+      <ul style="color:#bbb; padding-left:20px; line-height:2rem; font-size:0.9rem;">
+        <li><strong style="color:#fff;">PILLAR 1:</strong> 24/7 Contextual Machine Response. Connects an autonomous AI engine trained to intercept and handle client queries automatically using custom brand books.</li>
+        <li><strong style="color:#fff;">LIVE ACTION BUTTONS:</strong> One-tap handoff overrides inside Discord with embedded response triggers.</li>
+        <li><strong style="color:#fff;">VISION SCANNER:</strong> Uses OpenAI Vision API arrays to parse uploaded screenshots and automatically confirm Bank Transfer receipts.</li>
+        <li><strong style="color:#fff;">ANALYTICS UTILITY:</strong> Run the <code style="color:#fff; background:#222; padding:2px 6px;">!report</code> macro to build structured spreadsheet ledgers instantly.</li>
+      </ul>
+    `,
+    'enterprise-pillars': `
+      <h3 style="color:#00e5ff; font-family:monospace; margin-bottom:1rem;">[MANIFEST] ENTERPRISE TOTAL DISPLACEMENT</h3>
+      <p style="color:#888; font-size:0.9rem; line-height:1.6;">Bespoke standalone infrastructure design built entirely for enterprise operations:</p>
+      <ul style="color:#bbb; padding-left:20px; line-height:2rem; font-size:0.9rem;">
+        <li><strong style="color:#fff;">CUSTOM COMPILATIONS:</strong> Tailored scripts explicitly engineered for your specific workspace parameters and legacy systems.</li>
+        <li><strong style="color:#fff;">MOBILE LEDGER APP:</strong> Deploys a secure AppSheet native interface right to the stakeholder's mobile device for isolated financial transparency.</li>
+        <li><strong style="color:#fff;">INTERNAL SCHEDULING SYSTEM:</strong> Automated HR modules built to scan applicant IDs, collect verification PDFs, and organize digital onboarding records.</li>
+        <li><strong style="color:#fff;">DEDICATED CHANNEL STRUCTURES:</strong> Inventory alerts, supplier notifications, and raw monitoring diagnostics.</li>
+      </ul>
+    `
+  };
+
+  if (technicalManifests[contentKey]) {
+    modalBody.innerHTML = technicalManifests[contentKey];
+    modal.classList.add("open"); // Leverages your global modal window system
+  }
+}
+
+// Ensure global close command matches your template's function architecture
+function closeDetail() {
+  const modal = document.getElementById("detail-modal");
+  if (modal) {
+    modal.classList.remove("open");
+  }
+}

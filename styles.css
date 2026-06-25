@@ -1606,7 +1606,353 @@ body::before {
 .architect-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(185, 28, 28, 0.1);
+  
 }
+
+/* =========================================
+   TACTICAL PRICING ARCHITECTURE GRID
+   ========================================= */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-8);
+  align-items: stretch;
+  margin-top: 3rem;
+}
+
+.pricing-card {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  border-radius: var(--radius-sm);
+  background: rgba(5, 5, 5, 0.95);
+}
+
+/* Recommended Tier Border Activation */
+.pricing-card.recommended-tier {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 30px rgba(185, 28, 28, 0.15);
+  transform: scale(1.02);
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: #fff;
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 4px 14px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.p-card-header h3 {
+  font-size: 1.6rem;
+  color: var(--color-heading);
+  margin: 0.75rem 0 0.5rem 0;
+  letter-spacing: -0.5px;
+}
+
+.tier-purpose {
+  font-size: 0.85rem;
+  color: #777;
+  line-height: 1.4;
+  margin: 0;
+  min-height: 60px;
+}
+
+.p-card-price {
+  margin: 2rem 0 0.5rem 0;
+  font-family: monospace;
+}
+
+.p-card-price .currency {
+  font-size: 1rem;
+  color: var(--color-accent);
+  vertical-align: super;
+  font-weight: bold;
+}
+
+.p-card-price .amount {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.p-card-price .period {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.p-card-setup {
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.p-card-specs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+  border-top: 1px solid #111;
+}
+
+.p-card-specs li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #111;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.p-card-specs li strong {
+  color: #fff;
+}
+
+.p-card-specs li.disabled-spec {
+  color: #333;
+  text-decoration: line-through;
+}
+
+/* Interactive Tappable Specs */
+.tappable-spec {
+  color: var(--color-accent) !important;
+  cursor: pointer;
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 0.8rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: padding-left 0.2s ease;
+}
+
+.tappable-spec:hover {
+  background: rgba(185, 28, 28, 0.05);
+  padding-left: 5px;
+}
+
+.spec-chevron {
+  font-size: 0.7rem;
+}
+
+.p-card-btn {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1px solid #222;
+  color: #fff;
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  padding: 12px;
+  text-align: center;
+}
+
+.pricing-card:hover .p-card-btn {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.pricing-card.recommended-tier .p-card-btn {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.pricing-card.recommended-tier:hover .p-card-btn {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  box-shadow: 0 0 15px #fff;
+}
+
+/* Ledger & Add-ons Block Layout */
+.ledger-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: var(--space-8);
+  margin-top: 2rem;
+}
+
+.ledger-block {
+  padding: 2rem;
+  background: rgba(4, 4, 5, 0.9);
+}
+
+.ledger-block h4 {
+  margin-top: 0;
+  color: #fff;
+  font-family: monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #222;
+  padding-bottom: 0.75rem;
+}
+
+.ledger-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #111;
+  font-size: 0.9rem;
+}
+
+.ledger-item {
+  color: #bbb;
+}
+
+.ledger-price {
+  font-family: monospace;
+  color: #fff;
+}
+
+.ledger-price small {
+  color: #555;
+}
+
+/* Pulse Glow Keyframe for Growth Tier Button */
+.pulse-red {
+  animation: redGlow 2s infinite ease-in-out;
+}
+@keyframes redGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(185, 28, 28, 0.4); }
+  50% { box-shadow: 0 0 20px rgba(185, 28, 28, 0.8); }
+}
+
+@media (max-width: 768px) {
+  .pricing-card.recommended-tier {
+    transform: scale(1);
+  }
+  .ledger-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   TACTICAL INTERACTION MODIFIERS (HOVERS)
+   ========================================= */
+
+/* Smooth baseline transition handler */
+.pricing-card, .ledger-block, .ledger-row, .p-card-btn {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* 1. Base Pricing Card Hover Protocol */
+.pricing-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 0 0 15px rgba(255, 255, 255, 0.05);
+  background: rgba(12, 12, 14, 0.98) !important;
+}
+
+/* Growth Card Overrides on Hover */
+.pricing-card.recommended-tier:hover {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px var(--color-accent-glow);
+}
+
+/* 2. Standalone Ledger & Spikes Block Interactions */
+.ledger-block:hover {
+  transform: translateY(-4px);
+  border-color: rgba(185, 28, 28, 0.4) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), inset 0 0 15px rgba(185, 28, 28, 0.03);
+  background: rgba(10, 10, 12, 0.95) !important;
+}
+
+/* Internal Row Highlights */
+.ledger-row:hover {
+  background: rgba(255, 255, 255, 0.01);
+  padding-left: 8px;
+  color: #fff;
+}
+
+.ledger-row:hover .ledger-item {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.ledger-row:hover .ledger-price {
+  color: var(--color-accent);
+  text-shadow: 0 0 10px var(--color-accent-glow);
+}
+
+/* 3. Specs List Hover Feedback */
+.p-card-specs li:not(.tappable-spec):not(.disabled-spec):hover {
+  color: #fff;
+  padding-left: 4px;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 4. Action Button Hover Refinements */
+.pricing-card:hover .p-card-btn {
+  background: var(--color-heading) !important;
+  color: #000000 !important;
+  border-color: var(--color-heading) !important;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.pricing-card.recommended-tier:hover .p-card-btn {
+  background: var(--color-accent) !important;
+  color: #ffffff !important;
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 25px var(--color-accent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =========================================
    SERVICES SECTION
    ========================================= */
