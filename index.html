@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EDO Infrastructure | Vision</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Hardened digital infrastructure for high-stake entities." />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand"><span class="brand-text">CodeGuardian</span></a>
+    
+    <button class="mobile-nav-toggle" aria-expanded="false">
+      <div class="hamburger"></div>
+    </button>
+
+    <nav class="nav">
+      <ul class="nav-list">
+       <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">Methodology</a></li>
+        <li><a href="services.html" class="nav-link">Infrastructure</a></li>
+        <li><a href="portal.html" class="nav-link btn btn-outline">Boardroom</a></li>
+      </ul>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+ 
+<main id="top">
+
+<section id="hero" class="section hero reveal">
+  <div class="video-background">
+    <div class="video-overlay"></div>
+    <video autoplay muted loop playsinline id="hero-video">
+      <source src="assets/icons/REDMATRIX.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="hero-eyebrow">GUARDIAN_EDO_PROTOCOL // V2.0</p>
+        <h1 class="hero-title glitch-text" data-text="COMPLETE BUSINESS DISPLACEMENT">
+          Complete Business <br>
+          Displacement.
+        </h1>
+        <p class="hero-subtitle">
+          Unlock your business from the cage of time. The Guardian replaces manual labor 
+          with logical precision and cyber-hardened infrastructure. 
+        </p>
+        <div class="hero-actions">
+          <a href="portal.html" class="btn btn-primary pulse">Initiate System Audit</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="audit" class="section reveal" style="background: radial-gradient(circle at center, rgba(207, 0, 0, 0.03) 0%, transparent 70%);">
+  <div class="container">
+    <div class="audit-box glass" style="border-radius: 4px; padding: 40px; text-align: center;">
+      <div class="audit-header">
+        <p class="status-indicator" style="justify-content: center; margin-bottom: 10px;"><span class="blip"></span> ANALYZING_SYSTEM_LATENCY</p>
+        <h2 class="section-title">Operational Diagnostic</h2>
+      </div>
+      <div class="audit-counter" style="color: var(--color-accent);">
+        <span id="load-time-display">00.00MS</span>
+      </div>
+      <p class="audit-status" style="font-size: 0.75rem; letter-spacing: 2px;">PERIMETER_STATUS: <span id="audit-status-text">INITIALIZING...</span></p>
+    </div>
+  </div>
+</section>
+
+<section id="framework" class="section reveal">
+  <div class="container">
+    <div class="grid framework-grid">
+      
+      <div class="card glass" onclick="openDetail('intake')" style="transition: transform 0.4s; transform-style: preserve-3d;">
+        <div class="card-header" style="justify-content: space-between;">
+          <span class="card-id" style="font-family: monospace; color: #555;"></span>
+          <div class="status-indicator"><span class="blip"></span> </div>
+        </div>
+        <div class="card-main-content">
+          <h3 class="glitch-text" data-text="INTAKE ENGINE" style="font-size: 1.4rem;">Intake Engine</h3>
+          <p style="color: #aaa; font-size: 0.9rem;">Hardened vetting & lead scoring.</p>
+        </div>
+        <div class="click-overlay"><span>VIEW SPECS</span></div>
+      </div>
+
+      <div class="card glass" onclick="openDetail('perimeter')">
+        <div class="card-header">
+          <span class="card-id" style="font-family: monospace; color: #555;"></span>
+          <div class="status-indicator"><span class="blip"></span> </div>
+        </div>
+        <div class="card-main-content">
+          <h3 class="glitch-text" data-text="UNIFIED PERIMETER" style="font-size: 1.4rem;">Unified Perimeter</h3>
+          <p style="color: #aaa; font-size: 0.9rem;">Multi-channel API tunneling.</p>
+        </div>
+        <div class="click-overlay"><span>VIEW SPECS</span></div>
+      </div>
+
+      <div class="card glass" onclick="openDetail('intelligence')">
+        <div class="card-header">
+          <span class="card-id" style="font-family: monospace; color: #555;"></span>
+          <div class="status-indicator"><span class="blip"></span> </div>
+        </div>
+        <div class="card-main-content">
+          <h3 class="glitch-text" data-text="FISCAL INTELLIGENCE" style="font-size: 1.4rem;">Fiscal Intelligence</h3>
+          <p style="color: #aaa; font-size: 0.9rem;">Real-time autonomous auditing.</p>
+        </div>
+        <div class="click-overlay"><span>VIEW SPECS</span></div>
+      </div>
+
+      <div class="card glass" onclick="openDetail('executor')">
+        <div class="card-header">
+          <span class="card-id" style="font-family: monospace; color: #555;"></span>
+          <div class="status-indicator"><span class="blip"></span> </div>
+        </div>
+        <div class="card-main-content">
+          <h3 class="glitch-text" data-text="THE EXECUTOR" style="font-size: 1.4rem;">The Executor</h3>
+          <p style="color: #aaa; font-size: 0.9rem;">Autonomous fulfillment triggers.</p>
+        </div>
+        <div class="click-overlay"><span>VIEW SPECS</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="section reveal" style="text-align: center; min-height: 80vh; display: flex; align-items: center; background: radial-gradient(circle at center, rgba(185, 28, 28, 0.05) 0%, transparent 80%);">
+  <div class="container">
+    <h2 class="hero-title glitch-text" data-text="START THE ENGINE">Stop managing.<br>Start <span style="color:var(--color-accent)">driving.</span></h2>
+    <p class="hero-subtitle">
+      Every second of manual friction is lost wealth. Deploy the Guardian and achieve total operational displacement.
+    </p>
+    <div class="cta-actions" style="margin-top: 2rem;">
+      <a href="portal.html" class="btn btn-primary pulse" style="font-size: 1.2rem; padding: 1.5rem 3rem;">Request Infrastructure Audit</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<div id="detail-modal" class="modal-overlay" onclick="closeDetail()">
+  <div class="modal-content glass" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closeDetail()">&times;</button>
+    <div id="modal-body">
+      </div>
+  </div>
+</div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; <span id="year"></span>  CODEGUARDIAN. OWNED AND OPERATED BY TYRESE TYRICK BAILEY.
+
+KNIGHTSVILLE, YALLAHS P.O., ST. THOMAS, JAMAICA</p>
+      <ul class="footer-links">
+        <li><a href="#top">System Reset</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
