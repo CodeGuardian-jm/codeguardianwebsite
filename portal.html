@@ -103,6 +103,47 @@
     </ul>
   </div>
 </footer>
+ <script>
+document.getElementById('guardianAuditForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'TRANSMITTING...';
+    btn.disabled = true;
+
+    const name = document.getElementById('opName').value;
+    const email = document.getElementById('opEmail').value;
+    const tier = document.getElementById('inquiryType').value;
+    const message = document.getElementById('opMessage').value;
+
+    try {
+        await fetch('https://script.google.com/macros/s/AKfycbz7IhOyiflv0tNBM0F9ZAXkGr9N7cpis6UKq3LLSevrFD82tG2uGQJPB3tlaqqsYeCT/exec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                action: 'appendTransaction',
+                platform: 'Website',
+                entry_type: 'message',
+                amount_jmd: 0,
+                client_name: name,
+                description: message,
+                id: email,
+                notes: 'Package Interest: ' + tier + ' | Email: ' + email
+            })
+        });
+
+        btn.textContent = 'TRANSMISSION_COMPLETE ✓';
+        btn.style.background = '#00ff00';
+        btn.style.color = '#000';
+        this.reset();
+
+    } catch (err) {
+        btn.textContent = 'TRANSMISSION_FAILED — RETRY';
+        btn.disabled = false;
+        console.error(err);
+    }
+});
+</script>
 
 <script src="scripts.js"></script>
 </body>
